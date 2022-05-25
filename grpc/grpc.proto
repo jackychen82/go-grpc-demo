@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "./;pb";
+
+service GrpcSrv {
+    rpc GetData (GetDataReq) returns (GetDataResp);
+}
+
+message GetDataReq{
+  string Request = 1;
+}
+
+message GetDataResp{
+  string Response = 1;
+}
